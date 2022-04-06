@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -16,6 +16,21 @@
   <ItemGroup>
     <ProjectReference Include="..\DontWreckMyHouse.Core\DontWreckMyHouse.Core.csproj" />
     <ProjectReference Include="..\DontWreckMyHouse.DAL\DontWreckMyHouse.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="TestData\guestsTest.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestData\hostsTest.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestData\seed-3edda6bc-ab95-49a8-8962-d50b53f84b15.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestData\TestReservations\3edda6bc-ab95-49a8-8962-d50b53f84b15.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

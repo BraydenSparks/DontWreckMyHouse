@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DontWreckMyHouse.Core\DontWreckMyHouse.Core.csproj" />
+    <ProjectReference Include="..\DontWreckMyHouse.DAL\DontWreckMyHouse.DAL.csproj" />
   </ItemGroup>
 
 </Project>
