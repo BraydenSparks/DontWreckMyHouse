@@ -1,0 +1,15 @@
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.DAL\bin\Debug\net5.0\DontWreckMyHouse.DAL.deps.json
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.DAL\bin\Debug\net5.0\DontWreckMyHouse.DAL.dll
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.DAL\bin\Debug\net5.0\ref\DontWreckMyHouse.DAL.dll
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.DAL\bin\Debug\net5.0\DontWreckMyHouse.DAL.pdb
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.DAL\bin\Debug\net5.0\DontWreckMyHouse.Core.dll
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.DAL\bin\Debug\net5.0\DontWreckMyHouse.Core.pdb
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.DAL\obj\Debug\net5.0\DontWreckMyHouse.DAL.csproj.AssemblyReference.cache
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.DAL\obj\Debug\net5.0\DontWreckMyHouse.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.DAL\obj\Debug\net5.0\DontWreckMyHouse.DAL.AssemblyInfoInputs.cache
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.DAL\obj\Debug\net5.0\DontWreckMyHouse.DAL.AssemblyInfo.cs
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.DAL\obj\Debug\net5.0\DontWreckMyHouse.DAL.csproj.CoreCompileInputs.cache
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.DAL\obj\Debug\net5.0\DontWreckMyHouse.DAL.csproj.CopyComplete
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.DAL\obj\Debug\net5.0\DontWreckMyHouse.DAL.dll
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.DAL\obj\Debug\net5.0\ref\DontWreckMyHouse.DAL.dll
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.DAL\obj\Debug\net5.0\DontWreckMyHouse.DAL.pdb

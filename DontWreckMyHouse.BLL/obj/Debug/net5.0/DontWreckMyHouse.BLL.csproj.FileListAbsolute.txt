@@ -1,0 +1,17 @@
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\bin\Debug\net5.0\DontWreckMyHouse.BLL.deps.json
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\bin\Debug\net5.0\DontWreckMyHouse.BLL.dll
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\bin\Debug\net5.0\ref\DontWreckMyHouse.BLL.dll
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\bin\Debug\net5.0\DontWreckMyHouse.BLL.pdb
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\bin\Debug\net5.0\DontWreckMyHouse.Core.dll
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\bin\Debug\net5.0\DontWreckMyHouse.DAL.dll
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\bin\Debug\net5.0\DontWreckMyHouse.Core.pdb
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\bin\Debug\net5.0\DontWreckMyHouse.DAL.pdb
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\obj\Debug\net5.0\DontWreckMyHouse.BLL.csproj.AssemblyReference.cache
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\obj\Debug\net5.0\DontWreckMyHouse.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\obj\Debug\net5.0\DontWreckMyHouse.BLL.AssemblyInfoInputs.cache
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\obj\Debug\net5.0\DontWreckMyHouse.BLL.AssemblyInfo.cs
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\obj\Debug\net5.0\DontWreckMyHouse.BLL.csproj.CoreCompileInputs.cache
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\obj\Debug\net5.0\DontWreckMyHouse.BLL.csproj.CopyComplete
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\obj\Debug\net5.0\DontWreckMyHouse.BLL.dll
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\obj\Debug\net5.0\ref\DontWreckMyHouse.BLL.dll
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.BLL\obj\Debug\net5.0\DontWreckMyHouse.BLL.pdb

@@ -1,0 +1,11 @@
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.Core\bin\Debug\net5.0\DontWreckMyHouse.Core.deps.json
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.Core\bin\Debug\net5.0\DontWreckMyHouse.Core.dll
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.Core\bin\Debug\net5.0\ref\DontWreckMyHouse.Core.dll
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.Core\bin\Debug\net5.0\DontWreckMyHouse.Core.pdb
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.Core\obj\Debug\net5.0\DontWreckMyHouse.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.Core\obj\Debug\net5.0\DontWreckMyHouse.Core.AssemblyInfoInputs.cache
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.Core\obj\Debug\net5.0\DontWreckMyHouse.Core.AssemblyInfo.cs
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.Core\obj\Debug\net5.0\DontWreckMyHouse.Core.csproj.CoreCompileInputs.cache
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.Core\obj\Debug\net5.0\DontWreckMyHouse.Core.dll
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.Core\obj\Debug\net5.0\ref\DontWreckMyHouse.Core.dll
+D:\Brayden\Dev10 Trainning\Mastery Assignment\DontWreckMyHouse\DontWreckMyHouse.Core\obj\Debug\net5.0\DontWreckMyHouse.Core.pdb

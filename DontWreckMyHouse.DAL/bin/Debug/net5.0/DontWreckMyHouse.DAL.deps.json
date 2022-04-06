@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "DontWreckMyHouse.DAL/1.0.0": {
+        "dependencies": {
+          "DontWreckMyHouse.Core": "1.0.0"
+        },
+        "runtime": {
+          "DontWreckMyHouse.DAL.dll": {}
+        }
+      },
+      "DontWreckMyHouse.Core/1.0.0": {
+        "runtime": {
+          "DontWreckMyHouse.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DontWreckMyHouse.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DontWreckMyHouse.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
