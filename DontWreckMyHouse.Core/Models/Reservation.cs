@@ -22,6 +22,11 @@ namespace DontWreckMyHouse.Core.Models
 
         public decimal ComputeReservationTotal()
         {
+            if(StartDate >= EndDate)
+            {
+                return 0;
+            }
+
             DateTime start = StartDate;
             TimeSpan span = EndDate - start;
             var days = span.Days;
@@ -32,7 +37,7 @@ namespace DontWreckMyHouse.Core.Models
             {
                 if (start.DayOfWeek != DayOfWeek.Saturday && start.DayOfWeek != DayOfWeek.Sunday)
                 {
-                    ++weekdays;
+                    weekdays++;
                 }
                 start = start.AddDays(1);
             }

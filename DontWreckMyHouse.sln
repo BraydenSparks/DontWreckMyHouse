@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DontWreckMyHouse.BLL", "Don
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DontWreckMyHouse.DAL", "DontWreckMyHouse.DAL\DontWreckMyHouse.DAL.csproj", "{2B577670-790E-4496-9142-741B3D63D245}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DontWreckMyHouse.Core.Test", "DontWreckMyHouse.Core.Test\DontWreckMyHouse.Core.Test.csproj", "{69BB2277-80DF-43CE-8445-6409F8AEEC04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2B577670-790E-4496-9142-741B3D63D245}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B577670-790E-4496-9142-741B3D63D245}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B577670-790E-4496-9142-741B3D63D245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69BB2277-80DF-43CE-8445-6409F8AEEC04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69BB2277-80DF-43CE-8445-6409F8AEEC04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69BB2277-80DF-43CE-8445-6409F8AEEC04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69BB2277-80DF-43CE-8445-6409F8AEEC04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
