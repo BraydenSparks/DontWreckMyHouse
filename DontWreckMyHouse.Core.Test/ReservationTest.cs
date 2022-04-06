@@ -4,7 +4,7 @@ using System;
 
 namespace DontWreckMyHouse.Core.Test
 {
-    public class Tests
+    public class ReservationTest
     {
         private Guest guest;
         private Host host;
