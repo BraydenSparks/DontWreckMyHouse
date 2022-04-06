@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace DontWreckMyHouse.DAL.Tests
 {
-    public class RepositoryTests
+    public class ReservationFileRepositoryTest
     {
         [SetUp]
         public void Setup()
