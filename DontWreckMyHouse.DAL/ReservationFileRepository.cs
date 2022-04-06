@@ -23,12 +23,27 @@ namespace DontWreckMyHouse.DAL
 
         public bool Add(Reservation reservation)
         {
-            throw new NotImplementedException();
+            List<Reservation> all = FindByHostId(reservation.Host.Id);
+            reservation.Id = (all.Count == 0 ? 0 : all.Max(i => i.Id)) + 1;
+            all.Add(reservation);
+            WriteToFile(all, reservation.Host.Id);
+            return true;
         }
 
         public bool Cancel(Reservation reservation)
         {
-            throw new NotImplementedException();
+            List<Reservation> all = FindByHostId(reservation.Host.Id);
+            Reservation toBeRemoved = all.FirstOrDefault(r => r.Id == reservation.Id);
+            if(toBeRemoved != null)
+            {
+                all.Remove(toBeRemoved);
+                WriteToFile(all,reservation.Host.Id);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public List<Reservation> FindByHostId(string Id)

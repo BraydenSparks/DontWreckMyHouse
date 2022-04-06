@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DontWreckMyHouse.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,10 +10,16 @@ namespace DontWreckMyHouse.UI
     public class Controller
     {
         private readonly View view;
+        private readonly ReservationService reservationService;
+        private readonly HostService hostService;
+        private readonly GuestService guestService;
 
-        public Controller(View view)
+        public Controller(View view,ReservationService reservationService,HostService hostService, GuestService guestService)
         {
             this.view = view;
+            this.reservationService = reservationService;
+            this.hostService = hostService;
+            this.guestService = guestService;
         }
 
         public void Run()

@@ -65,7 +65,6 @@ namespace DontWreckMyHouse.DAL.Tests
         public void TestAdd()
         {
 
-
             Assert.Pass();
         }
 
