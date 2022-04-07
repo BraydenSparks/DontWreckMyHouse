@@ -17,7 +17,8 @@ namespace DontWreckMyHouse.Core.Models
 
         public override string ToString()
         {
-            return base.ToString();
+            // ID: 8, 08/12/2020 - 08/18/2020, Guest: Carncross, Tremain, Email: tcarncross2@japanpost.jp
+            return string.Format("ID:{0} {1:d} - {2:d}, Guest: {3}",Id,StartDate,EndDate,Guest);
         }
 
         public decimal ComputeReservationTotal()

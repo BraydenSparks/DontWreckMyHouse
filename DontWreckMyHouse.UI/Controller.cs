@@ -1,4 +1,5 @@
 ﻿using DontWreckMyHouse.BLL;
+using DontWreckMyHouse.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,23 +66,124 @@ namespace DontWreckMyHouse.UI
         private void CancelReservation()
         {
             view.DisplayHeader(MainMenuOption.CancelReservation.ToLabel());
+
+            // Get valid user input
+
+            // compute result
+            var result = reservationService.FindByHostId("");
+
+            // handle result
+            if (result.Success)
+            {
+                // Display reservations from result.Value
+            }
+            else
+            {
+                // Display all error messages from result.Messages
+            }
+
         }
 
         private void EditReservation()
         {
             view.DisplayHeader(MainMenuOption.EditReservation.ToLabel());
+
+            // Get valid user input
+
+            // compute result
+            var result = reservationService.FindByHostId("");
+
+            // handle result
+            if (result.Success)
+            {
+                // Display reservations from result.Value
+            }
+            else
+            {
+                // Display all error messages from result.Messages
+            }
+
         }
 
         private void MakeReservation()
         {
             view.DisplayHeader(MainMenuOption.MakeReservation.ToLabel());
+
+            // Get valid user input
+
+            // compute result
+            var result = reservationService.FindByHostId("");
+
+            // handle result
+            if (result.Success)
+            {
+                // Display reservations from result.Value
+            }
+            else
+            {
+                // Display all error messages from result.Messages
+            }
+
         }
 
         private void ViewReservation()
         {
             view.DisplayHeader(MainMenuOption.ViewReservation.ToLabel());
-
+            var hostResult = GetHost();
+            if (hostResult.Success)
+            {
+                var reservationResult = reservationService.FindByHostId(hostResult.Value.Id);
+                if (reservationResult.Success)
+                {
+                    foreach(Reservation reservation in reservationResult.Value)
+                    {
+                        view.Display(reservation.ToString());
+                    }
+                }
+            }
+            foreach (string message in hostResult.Messages)
+            {
+                view.DisplayError(message);
+            }
 
         }
+
+        private Result<Host> GetHost()
+        {
+            var option = view.SelectSearchOption();
+            Result<Host> hostResult = new Result<Host>();
+            switch (option)
+            {
+                case SearchOption.ID:
+                    var id = view.PromptString("Enter Host Id as string: ");
+                    hostResult = hostService.FindById(id);
+                    break;
+                case SearchOption.LastName:
+                    var name = view.PromptString("Last name starts with: ");
+                    var possibleHostResults = hostService.FindByLastName(name);
+                    if (possibleHostResults.Success)
+                    {
+                        hostResult.Value = view.PromptSelect(possibleHostResults.Value, "Select a Host: ");
+                    }
+                    else
+                    {
+                        foreach(string message in possibleHostResults.Messages)
+                        {
+                            hostResult.AddMessage(message
+                                );
+                        }
+                    }
+                    break;
+                case SearchOption.Exit:
+                    hostResult.AddMessage("User returned to menu");
+                    break;
+            }
+            return hostResult;
+        }
+
+
+
+
+
     }
 }

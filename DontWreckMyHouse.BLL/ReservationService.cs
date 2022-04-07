@@ -23,7 +23,12 @@ namespace DontWreckMyHouse.BLL
 
         public Result<List<Reservation>> FindByHostId(string hostId)
         {
-            return new Result<List<Reservation>> { Value = reservationRepo.FindByHostId(hostId) };
+            var result = new Result<List<Reservation>> { Value = reservationRepo.FindByHostId(hostId) };
+            
+            // foreach result get guest by guest id and get host by host id
+
+
+            return result;
         }
         public Result<Reservation> Add(Reservation reservation)
         {

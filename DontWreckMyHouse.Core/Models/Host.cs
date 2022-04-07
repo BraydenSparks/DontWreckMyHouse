@@ -19,7 +19,7 @@ namespace DontWreckMyHouse.Core.Models
 
         public override string ToString()
         {
-            return base.ToString();
+            return string.Format("[bold]{0,15}[/]: {1} | {2}",LastName,PhoneNumber,Email);
         }
     }
 }
