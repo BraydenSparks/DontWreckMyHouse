@@ -65,43 +65,75 @@ namespace DontWreckMyHouse.UI
 
         private void CancelReservation()
         {
-            view.DisplayHeader(MainMenuOption.CancelReservation.ToLabel());
-
-            // Get valid user input
-
-            // compute result
-            var result = reservationService.FindByHostId("");
-
-            // handle result
-            if (result.Success)
+        view.DisplayHeader(MainMenuOption.CancelReservation.ToLabel());
+            var host = GetHost();
+            if (host.Success)
             {
-                // Display reservations from result.Value
+                view.DisplaySuccess(host.Value.ToString());
+                var reservations = GetReservationsAfter(host.Value, DateTime.Today);
+                if (reservations.Value.Count > 0)
+                {
+                    var option = view.PromptSelect<Reservation>(reservations.Value, "Which reservation should be removed?");
+                    if (view.PromptYesNo("You are about to remove this reservation. Are you sure?"))
+                    {
+                        Result<Reservation> result = reservationService.Cancel(option);
+                        if (result.Success)
+                        {
+                            view.DisplaySuccess($"Reservation was successfuly canceled.");
+                        }
+                    }
+                    else
+                    {
+                        view.DisplayError("Reservation was [underline]not[/] canceled.");
+                    }
+                }
             }
-            else
-            {
-                // Display all error messages from result.Messages
-            }
-
+            view.DiplayErrorMessages(host.Messages);
         }
 
         private void EditReservation()
         {
             view.DisplayHeader(MainMenuOption.EditReservation.ToLabel());
-
-            // Get valid user input
-
-            // compute result
-            var result = reservationService.FindByHostId("");
-
-            // handle result
-            if (result.Success)
+            var host = GetHost();
+            if (host.Success)
             {
-                // Display reservations from result.Value
+                view.DisplaySuccess(host.Value.ToString());
+                var reservations = GetReservationsAfter(host.Value,DateTime.Today);
+                if(reservations.Value.Count > 0)
+                {
+                    var option = view.PromptSelect<Reservation>(reservations.Value,"Which reservation should be changed?");
+                    bool isValid = false;
+                    while(!isValid)
+                    {
+                        option.StartDate = view.PromptDateTime($"Start ({option.StartDate:d}): ", DateTime.Today);
+                        option.EndDate = view.PromptDateTime($"End ({option.EndDate:d}): ", option.StartDate);
+                        if(CheckAvailability(option.StartDate, option.EndDate, option.Host,option.Id))
+                        {
+                            isValid = true;
+                        }
+                        else
+                        {
+                            view.DisplayError("Selected Dates were not available.");
+                        }
+                    }
+                    option.Host = host.Value;
+                    option.Total = option.ComputeReservationTotal();
+                    if (view.PromptYesNo("You are about to save changes.\n" +
+                        $"Is total:{option.Total:c} okay?"))
+                    {
+                        Result<Reservation> result = reservationService.Update(option);
+                        if (result.Success)
+                        {
+                            view.DisplaySuccess($"Reservation was successfuly changed.");
+                        }
+                    }
+                    else
+                    {
+                        view.DisplayError("Changes were not saved.");
+                    }
+                }
             }
-            else
-            {
-                // Display all error messages from result.Messages
-            }
+            view.DiplayErrorMessages(host.Messages);
 
         }
 
@@ -117,7 +149,7 @@ namespace DontWreckMyHouse.UI
                 if (host.Success)
                 {
                     view.DisplaySuccess(host.Value.ToString());
-                    host = ReportFutureReservations(host.Value);
+                    host = ReportReservations(host.Value,DateTime.Today);
                 }
                 if (host.Success)
                 {
@@ -175,13 +207,27 @@ namespace DontWreckMyHouse.UI
             return true;
         }
 
+        private bool CheckAvailability(DateTime start, DateTime end, Host host, int idToIgnore)
+        {
+            var all = reservationService.FindByHostId(host.Id);
+            if (all.Success)
+            {
+                all.Value = all.Value.Where(r => r.StartDate <= end && r.EndDate >= start && r.Id != idToIgnore).ToList();
+                if (all.Value.Count > 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         private void ViewReservation()
         {
             view.DisplayHeader(MainMenuOption.ViewReservation.ToLabel());
             var hostResult = GetHost();
             if (hostResult.Success)
             {
-                hostResult = ReportAllReservations(hostResult.Value);
+                hostResult = ReportReservations(hostResult.Value,DateTime.MinValue);
             }
             view.DiplayErrorMessages(hostResult.Messages);        
         }
@@ -250,45 +296,37 @@ namespace DontWreckMyHouse.UI
             return guestResult;
         }
 
-        private Result<Host> ReportAllReservations(Host host)
+        private Result<Host> ReportReservations(Host host,DateTime date)
         {
-            var reservationResult = reservationService.FindByHostId(host.Id);
-            if (reservationResult.Success)
+            var reservations = GetReservationsAfter(host,date);
+            if (reservations.Success)
             {
-                view.DisplaySuccess($"{reservationResult.Value.Count} Results for: {host.Address}");
-                foreach (Reservation reservation in reservationResult.Value)
+                view.DisplaySuccess($"{reservations.Value.Count} Results for: {host.Address}");
+                foreach (Reservation reservation in reservations.Value)
                 {
-                    reservation.Guest = guestService.FindGuestById(reservation.Guest.Id).Value;
                     view.Display(reservation.ToString());
                 }
             }
             var result = new Result<Host>() { Value=host};
-            foreach (string message in reservationResult.Messages)
+            foreach (string message in reservations.Messages)
             {
                 result.AddMessage(message);
             }
             return result;
         }
 
-        private Result<Host> ReportFutureReservations(Host host)
+        private Result<List<Reservation>> GetReservationsAfter(Host host, DateTime date)
         {
             var reservationResult = reservationService.FindByHostId(host.Id);
-            reservationResult.Value = reservationResult.Value.Where(r => r.StartDate > DateTime.Today).ToList();
             if (reservationResult.Success)
             {
-                view.DisplaySuccess($"{reservationResult.Value.Count} Results for: {host.Address}");
+                reservationResult.Value = reservationResult.Value.Where(r => r.StartDate > date).ToList();
                 foreach (Reservation reservation in reservationResult.Value)
                 {
                     reservation.Guest = guestService.FindGuestById(reservation.Guest.Id).Value;
-                    view.Display(reservation.ToString());
                 }
             }
-            var result = new Result<Host>() { Value = host };
-            foreach (string message in reservationResult.Messages)
-            {
-                result.AddMessage(message);
-            }
-            return result;
+            return reservationResult;
         }
 
 

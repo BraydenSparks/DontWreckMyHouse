@@ -1,4 +1,5 @@
-﻿using Spectre.Console;
+﻿using DontWreckMyHouse.Core.Models;
+using Spectre.Console;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +37,11 @@ namespace DontWreckMyHouse.UI
         public void DisplayError(string message)
         {
             AnsiConsole.Write(new Markup($"[red]{message}[/]\n"));
+        }
+
+        public void DisplayReport(List<Reservation> reservations )
+        {
+
         }
 
         public void DisplayError(List<string> errors)

@@ -82,7 +82,18 @@ namespace DontWreckMyHouse.DAL
 
         public bool Update(Reservation reservation)
         {
-            throw new NotImplementedException();
+            List<Reservation> all = FindByHostId(reservation.Host.Id);
+            Reservation toBeUpdated = all.FirstOrDefault(r => r.Id == reservation.Id);
+            if (toBeUpdated != null)
+            {
+                all[all.IndexOf(toBeUpdated)] = reservation;
+                WriteToFile(all, reservation.Host.Id);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private string GetFilePath(string hostId)
