@@ -20,7 +20,16 @@ namespace DontWreckMyHouse.UI
         {
             AnsiConsole.Write($"{message}\n");
         }
-        public void DisplaySuccess(string message)
+
+        public void DiplayErrorMessages(List<string> messages)
+        {
+            foreach (string message in messages)
+            {
+               DisplayError(message);
+            }
+        }
+
+    public void DisplaySuccess(string message)
         {
             AnsiConsole.Write(new Markup($"[green]{message}[/]\n"));
         }
@@ -123,13 +132,13 @@ namespace DontWreckMyHouse.UI
                 );
         }
 
-        public SearchOption SelectSearchOption()
+        public SearchOption SelectSearchOption(string message)
         {
             SearchOption[] options = Enum.GetValues<SearchOption>();
             Func<SearchOption, string> selector = opt => $"[grey]{opt.ToLabel()}[/]";
             SelectionPrompt<SearchOption> selectionPrompt = new SelectionPrompt<SearchOption>();
             selectionPrompt.Converter = selector;
-            selectionPrompt.Title = "[bold]Search by:[/]";
+            selectionPrompt.Title = $"[bold]{message}[/]";
             selectionPrompt.HighlightStyle(new Style(Color.White, Color.Grey23, null, null));
             selectionPrompt.AddChoices(options);
             var option = AnsiConsole.Prompt(selectionPrompt);

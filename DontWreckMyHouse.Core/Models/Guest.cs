@@ -18,7 +18,7 @@ namespace DontWreckMyHouse.Core.Models
         public override string ToString()
         {
             // Fraczak, Raymond, Email: rfraczakb5@ifeng.com
-            return string.Format("{0}, {1}, Email: {2}",LastName,FirstName,Email);
+            return string.Format("{0,15}, {1}, Email: {2}", LastName,FirstName,Email);
         }
 
     }

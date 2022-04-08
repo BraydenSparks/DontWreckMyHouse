@@ -12,5 +12,11 @@ namespace DontWreckMyHouse.Core.Models
         public string City;
         public State State;
         public int PostalCode;
+
+        public override string ToString()
+        {
+            return $"{Street}, {City}, {State}, {PostalCode}";
+        }
+
     }
 }
